@@ -197,7 +197,7 @@ void UpdateSimulation(std::vector<Object>& asteroids, std::vector<Vector2>& targ
                 for (const auto& layer : layers) {
                     for (const auto& neuron : layer) {
                         float adjustedY = neuron.position.y + neuron.bias; 
-                        Vector2 force = CalculateGravitationalForce(asteroids[i], neuron); 
+                        Vector2 force = GravitationalForce(asteroids[i], neuron); 
                         totalForce.x += force.x;
                         totalForce.y += force.y;
                     }
